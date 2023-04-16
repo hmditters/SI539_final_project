@@ -1,0 +1,373 @@
+/* nav */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #e9d49a;
+}
+
+p{
+    font-size: 14;
+    font-family: 'Fantasy';
+    margin: 10px 10px 10px 10px;
+}
+
+li{
+  font-family: 'Herculanum';
+  margin: 0px 0px 10px 0px;
+  font-size: 30px;
+}
+
+li a {
+    display: block;
+    color: #434344;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #ffffff;
+    color: rgb(220, 114, 48);
+}
+
+li a:hover:not(.active) {
+    background-color: #000000;
+    color: white;
+}
+
+@media (min-width: 768px){
+  ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: left;
+      width: 100%;
+}}
+
+/* nav */
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+img .about{
+  width: 100%;
+}
+
+h1{
+    font-size: 70px;
+    font-family: 'Herculanum';
+    font-weight: 900;
+    margin: 20px 5px 15px 5px;
+    font-style: oblique;
+    color: #584103;
+}
+
+h2{
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0px 0px 10px 0px; */
+  font-family: 'Herculanum';
+  font-size: 40px;
+}
+
+h3{
+  font-family: 'Herculanum';
+  font-size: 30px;
+}
+
+body{
+    background-color: #e9d49a;
+}
+
+p{
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+title{
+  background-color: #FF9F55;
+}
+
+/* about page */
+
+@media (min-width: 768px){
+  .about {
+    display: grid;
+    grid-template-columns: auto auto;
+}}
+
+.about{
+  margin: 10px 10px 10px 10px;
+  background-color: #d0971a;
+  border-radius: 30px;
+  border-style: groove;
+  border-width: 10px;
+}
+
+.about p{
+  margin: 10px 0px 10px 10px;
+}
+
+.about-element1{
+  margin: 20px;
+  line-height: 40px;
+}
+
+.about-element2{
+  margin: 10px 10px 10px 10px;
+}
+
+.about-element2 h2{
+  margin: 10px 0px 20px 0px;
+}
+
+/* about page */
+
+
+/* Timeline stuff */
+
+.timeline {
+    position: relative;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+.timeline h2{
+  font-size: 20px;
+}
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11.5px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+
+  .right::after {
+    left: -13px;
+  }
+
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+
+
+/* trading card stuff */
+
+.cards{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 50px 50px;
+  margin: 50px 0px 0px 50px;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 90px 90px;
+  }
+}
+
+.trading-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trading-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.trading-card h1{
+  font-size: 40px;
+}
+
+.trading-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.trading-card:hover .trading-inner {
+  transform: rotateY(180deg);
+}
+
+.trading-front, .trading-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.trading-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.trading-back {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+.trading-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.trading-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.trading-card:hover .trading-inner {
+    transform: rotateY(180deg);
+}
+
+.trading-front, .trading-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.trading-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.trading-back {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    overflow: auto;
+}
+
+/* school(s) stuff */
+
+.school{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  background-color: #d0971a;
+  border-radius: 30px;
+  border-style: groove;
+  border-width: 10px;
+}
+
+.school{
+  min-height: 100%;
+  max-height: 100%;
+  margin: 20px 50px 20px 20px;
+  background-color: #d0971a;
+  border-radius: 5%;
+}
+
+.podcast{
+  height: 200px;
+  width: 800px;
+  margin: 30px 30px 0px 30px;
+}
+
+.school h2{
+  margin: 20px 0px 10px 20px;
+}
+
+.school p{
+  margin: 10px 10px 10px 20px;
+}
+
